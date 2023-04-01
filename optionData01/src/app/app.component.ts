@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as highcharts from 'highcharts';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'optionData01';
+hC = highcharts;
+  linechart: any = {
+    series: [
+      {
+        data: [1, 2, 3],
+      },
+    ],
+    chart: {
+      type: 'line',
+    },
+    title: {
+      text: 'linechart',
+    },
+  };
 }
